@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="button" value=" " onmouseout="restablecerColor();" onmouseover="previsualizarColor('white');" onclick="cambiarColor('white');" style="background-color: white;">
+        <input type="button" value=" " onmouseout="restablecerColor();" onmouseover="previsualizarColor('black');" onclick="cambiarColor('black');" style="background-color: black;">
+        <input type="button" value=" " onmouseout="restablecerColor();" onmouseover="previsualizarColor('yellow');" onclick="cambiarColor('yellow');" style="background-color: yellow;">
+        <input type="button" value=" " onmouseout="restablecerColor();" onmouseover="previsualizarColor('red');" onclick="cambiarColor('red');" style="background-color: red;">
+        <input type="button" value=" " onmouseout="restablecerColor();" onmouseover="previsualizarColor('green');" onclick="cambiarColor('green');" style="background-color: green;">
+        <input type="button" value=" " onmouseout="restablecerColor();" onmouseover="previsualizarColor('blue');" onclick="cambiarColor('blue');" style="background-color: blue;">
+        <input type="button" value=" " onmouseout="restablecerColor();" onmouseover="previsualizarColor('blueviolet');" onclick="cambiarColor('blueviolet');" style="background-color: blueviolet;">
+        <input type="button" value=" " onmouseout="restablecerColor();" onmouseover="previsualizarColor('tomato');" onclick="cambiarColor('tomato');" style="background-color: tomato;">
+        <input type="button" value=" " onmouseout="restablecerColor();" onmouseover="previsualizarColor('brown');" onclick="cambiarColor('brown');" style="background-color: brown;">
+        <input type="button" value=" " onmouseout="restablecerColor();" onmouseover="previsualizarColor('gray');" onclick="cambiarColor('gray');" style="background-color: gray;">
+        <b>Color seleccionado: </b><label id="colorSeleccionado"></label>
+    </form>
+    <hr>
+    <div>
+        <h1>Texto personalizado</h1>
+        <p id="parrafo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur hic earum architecto,
+            inventore voluptatem nihil natus illo rerum mollitia quod? Optio ratione ipsa dicta impedit dolores quia
+            esse molestias ab soluta. Minima, mollitia maxime ad minus, vitae quisquam laboriosam molestias tempora
+            autem magni neque aspernatur necessitatibus natus pariatur dolor. Dolor, soluta aliquid iure modi quis
+            suscipit consectetur perferendis expedita cum numquam saepe voluptatum velit culpa quibusdam asperiores,
+            adipisci ut distinctio sapiente excepturi minus! Doloribus error ab voluptatum, voluptatem dolorem est velit
+            architecto molestias, a eaque atque ipsa inventore ipsam omnis explicabo assumenda reiciendis? Accusamus
+            dolore, ipsa praesentium id placeat ratione mollitia cum temporibus officiis itaque repudiandae numquam. A
+            ipsam sint sed dolores assumenda itaque consequatur cum distinctio nostrum modi laudantium sequi nemo
+            inventore nisi vero, voluptatibus dicta expedita! Laborum animi nobis, magnam quas atque consequatur
+            repellat cupiditate. Laudantium soluta repellat eius adipisci, ullam dolorum incidunt eaque minus.
+            Laboriosam, eos illum?</p>
+        <form>
+            <input type="button" value="Pequeño" onclick="cambiarSize(1);">
+            <input type="button" value="Mediano" onclick="cambiarSize(2);">
+            <input type="button" value="Grande" onclick="cambiarSize(3);"><br>
+            <!--Cambiar tipo de fuente-->
+            <input type="button" value="Times New Roman" onclick="cambiarFamily('Times New Roman');">
+            <input type="button" value="Arial" onclick="cambiarFamily('Arial');">
+            <input type="button" value="Cambria" onclick="cambiarFamily('Cambria');">
+            <input type="button" value="Consolas" onclick="cambiarFamily('Consolas');">
+            <input type="button" value="Verdana" onclick="cambiarFamily('Verdana');"><br>
+            <!--Cambiar color del texto-->
+            <input type="button" value=" " onclick="cambiarColorParrafo('white');" style="background-color: white;">
+            <input type="button" value=" " onclick="cambiarColorParrafo('black');" style="background-color: black;">
+            <input type="button" value=" " onclick="cambiarColorParrafo('yellow');" style="background-color: yellow;">
+            <input type="button" value=" " onclick="cambiarColorParrafo('red');" style="background-color: red;">
+            <input type="button" value=" " onclick="cambiarColorParrafo('green');" style="background-color: green;">
+            <input type="button" value=" " onclick="cambiarColorParrafo('blue');" style="background-color: blue;">
+            <input type="button" value=" " onclick="cambiarColorParrafo('blueviolet');" style="background-color: blueviolet;">
+            <input type="button" value=" " onclick="cambiarColorParrafo('tomato');" style="background-color: tomato;">
+            <input type="button" value=" " onclick="cambiarColorParrafo('brown');" style="background-color: brown;">
+            <input type="button" value=" " onclick="cambiarColorParrafo('gray');" style="background-color: gray;">
+        </form>
+    </div>
+    <hr>
+    <div id="contenedor">
+        <form>
+            <label>Ingrese su texto: </label><br>
+            <textarea id="textoUsuario"></textarea><br>
+            <input type="button" value="Agregar texto" onclick="agregarTexto();">
+            <input type="button" value="Eliminar texto" onclick="eliminarTexto();"><br>
+            <input type="button" value="Eventos" onmouseover="alert('evento onmouseover');">
+        </form>
+    </div>
+    <hr>
+    <div>
+        <form action="#" method="post">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre"><br>
+            <label for="apellido">Apellido:</label><br>
+            <input type="text" id="apellido"><br>
+            <label for="pais">País:</label><br>
+            <select id="pais">
+                <option>Seleccione</option>
+                <option>Chile</option>
+                <option>Argentina</option>
+                <option>Uruguay</option>
+            </select><br>
+            <label for="edad">Edad:</label><br>
+            <input type="number" max="100" min="1" id="edad"><br>
+            <input type="submit" value="Registrar" onclick="validar();"><br>
+        </form>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
